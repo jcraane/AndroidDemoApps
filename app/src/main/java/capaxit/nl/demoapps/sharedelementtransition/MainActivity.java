@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.transition.Slide;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -18,6 +19,7 @@ public class MainActivity extends BaseAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.main_activity_title);
         thumbnail = (ImageView) findViewById(R.id.thumbnail);
         thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,6 +27,15 @@ public class MainActivity extends BaseAppCompatActivity {
                 navigateToSecondActivity();
             }
         });
+//        disableFadeOnToolStatusAndNavigationBar();
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            final Slide slide = new Slide();
+            slide.excludeTarget(android.R.id.statusBarBackground, true);
+            slide.excludeTarget(android.R.id.navigationBarBackground, true);
+            slide.excludeTarget(R.id.toolbar, true);
+            getWindow().setExitTransition(slide);
+            getWindow().setEnterTransition(slide);
+        }
     }
 
     private void navigateToSecondActivity() {

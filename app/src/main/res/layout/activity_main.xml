@@ -3,9 +3,9 @@
     android:id="@+id/activity_main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="capaxit.nl.demoapps.sharedelementtransition.MainActivity">
 
     <android.support.v7.widget.Toolbar
@@ -15,12 +15,17 @@
         android:background="@color/colorAccent"
         android:minHeight="?attr/actionBarSize"/>
 
-
     <ImageView
         android:id="@+id/thumbnail"
-        android:transitionName="image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/poolhouse"/>
+        android:src="@drawable/poolhouse"
+        android:transitionName="image"/>
+
+    <View
+        android:id="@+id/someOtherView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#5f0"/>
 </LinearLayout>
