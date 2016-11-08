@@ -2,4 +2,5 @@
     <string name="app_name">DemoApps</string>
     <string name="main_activity_title">Main</string>
     <string name="second_activity_title">Second</string>
+    <string name="title_activity_bottom_sheet">BottomSheetActivity</string>
 </resources>

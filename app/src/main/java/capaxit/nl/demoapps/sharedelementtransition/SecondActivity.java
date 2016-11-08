@@ -1,9 +1,7 @@
 package capaxit.nl.demoapps.sharedelementtransition;
 
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.transition.Slide;
-import android.view.MenuItem;
 
 import capaxit.nl.demoapps.BaseAppCompatActivity;
 import capaxit.nl.demoapps.R;
@@ -26,17 +24,5 @@ public class SecondActivity extends BaseAppCompatActivity {
         }
 
 //        disableFadeOnToolStatusAndNavigationBar();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(final MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                ActivityCompat.finishAfterTransition(this);
-//                    finish();
-                return true;
-        }
-
-        return false;
     }
 }

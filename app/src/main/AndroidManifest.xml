@@ -9,6 +9,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".sharedelementtransition.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".sharedelementtransition.SecondActivity">
+        </activity>
+        <activity android:name=".ui.DropShadowActivity">
 <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -16,13 +24,10 @@
             </intent-filter>
 -->
         </activity>
-        <activity android:name=".sharedelementtransition.SecondActivity">
-        </activity>
-        <activity android:name=".ui.DropShadowActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+        <activity
+            android:name=".sharedelementtransition.BottomSheetActivity"
+            android:label="@string/title_activity_bottom_sheet"
+            android:theme="@style/AppTheme">
         </activity>
     </application>
 </manifest>

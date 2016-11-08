@@ -28,4 +28,10 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="#5f0"/>
+
+    <Button
+        android:id="@+id/navigateToBottomSheetActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BottomSheetActivity"/>
 </LinearLayout>
