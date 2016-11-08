@@ -48,9 +48,11 @@ public class BaseAppCompatActivity extends AppCompatActivity {
 
     protected final void setHomeAsUpEnabled() {
         final ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_white_24dp);
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_white_24dp);
+        }
     }
 
     protected void attachAndConfigureToolBar() {

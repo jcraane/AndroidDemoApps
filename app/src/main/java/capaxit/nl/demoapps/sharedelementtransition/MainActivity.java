@@ -6,7 +6,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.transition.Slide;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import capaxit.nl.demoapps.BaseAppCompatActivity;
@@ -37,10 +36,16 @@ public class MainActivity extends BaseAppCompatActivity {
             getWindow().setExitTransition(slide);
             getWindow().setEnterTransition(slide);
         }
-        ((Button) findViewById(R.id.navigateToBottomSheetActivity)).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.navigateToBottomSheetActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
                 startActivity(new Intent(MainActivity.this, BottomSheetActivity.class));
+            }
+        });
+        findViewById(R.id.navigateToSlidingPanalActivity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                startActivity(new Intent(MainActivity.this, SlidingUpPanelActivity.class));
             }
         });
     }
