@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShadowWrapper">
+        <!--todo add enum for shadow sides. -->
+    </declare-styleable>
+</resources>

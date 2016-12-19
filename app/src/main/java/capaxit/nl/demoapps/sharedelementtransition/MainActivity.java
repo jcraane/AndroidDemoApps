@@ -48,6 +48,16 @@ public class MainActivity extends BaseAppCompatActivity {
                 startActivity(new Intent(MainActivity.this, SlidingUpPanelActivity.class));
             }
         });
+        findViewById(R.id.listWifi).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                toListWifiActivity();
+            }
+        });
+    }
+
+    private void toListWifiActivity() {
+        startActivity(new Intent(this, ListWifiDetails.class));
     }
 
     private void navigateToSecondActivity() {
