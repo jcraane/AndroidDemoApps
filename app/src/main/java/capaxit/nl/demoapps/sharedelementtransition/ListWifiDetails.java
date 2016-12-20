@@ -130,6 +130,7 @@ public class ListWifiDetails extends AppCompatActivity {
             holder.ssid.setText(scanResult.SSID);
             final int level = WifiManager.calculateSignalLevel(scanResult.level, 5);
             holder.level.setText("" + level);
+            holder.macAddress.setText(scanResult.BSSID);
         }
 
         @Override
@@ -139,12 +140,14 @@ public class ListWifiDetails extends AppCompatActivity {
 
         static class ScanResultHolder extends RecyclerView.ViewHolder {
             TextView ssid;
+            TextView macAddress;
             TextView level;
 
             public ScanResultHolder(final View itemView) {
                 super(itemView);
                 ssid = (TextView) itemView.findViewById(R.id.ssid);
                 level = (TextView) itemView.findViewById(R.id.level);
+                macAddress = (TextView) itemView.findViewById(R.id.macAddress);
             }
         }
     }

@@ -5,14 +5,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
         android:padding="16dp">
-    <TextView
-            android:id="@+id/ssid"
-            android:layout_toLeftOf="@+id/level"
+    <LinearLayout
+            android:id="@+id/detailInfoHolder"
             android:layout_width="match_parent"
-            android:layout_centerVertical="true"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            tools:text="1234"/>
+            android:layout_toLeftOf="@+id/level"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+        <TextView
+                android:id="@+id/ssid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="1234"/>
+        <TextView
+                android:id="@+id/macAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="1234"/>
+    </LinearLayout>
 
     <TextView
             android:id="@+id/level"
