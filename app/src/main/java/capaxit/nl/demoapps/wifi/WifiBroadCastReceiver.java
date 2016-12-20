@@ -1,4 +1,4 @@
-package capaxit.nl.demoapps.sharedelementtransition;
+package capaxit.nl.demoapps.wifi;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

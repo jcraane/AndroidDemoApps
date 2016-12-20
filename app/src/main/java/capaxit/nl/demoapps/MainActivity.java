@@ -1,4 +1,4 @@
-package capaxit.nl.demoapps.sharedelementtransition;
+package capaxit.nl.demoapps;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,11 @@ import android.transition.Slide;
 import android.view.View;
 import android.widget.ImageView;
 
-import capaxit.nl.demoapps.BaseAppCompatActivity;
-import capaxit.nl.demoapps.R;
+import capaxit.nl.demoapps.recognition.RecognitionActivity;
+import capaxit.nl.demoapps.sharedelementtransition.BottomSheetActivity;
+import capaxit.nl.demoapps.wifi.ListWifiDetails;
+import capaxit.nl.demoapps.sharedelementtransition.SecondActivity;
+import capaxit.nl.demoapps.sharedelementtransition.SlidingUpPanelActivity;
 
 public class MainActivity extends BaseAppCompatActivity {
 
@@ -54,6 +57,16 @@ public class MainActivity extends BaseAppCompatActivity {
                 toListWifiActivity();
             }
         });
+        findViewById(R.id.recognition).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                toActivityRecognition();
+            }
+        });
+    }
+
+    private void toActivityRecognition() {
+        startActivity(new Intent(this, RecognitionActivity.class));
     }
 
     private void toListWifiActivity() {
